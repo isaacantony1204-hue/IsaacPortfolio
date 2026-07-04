@@ -27,7 +27,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
+    padding:20px 80px;
     background:rgba(2,6,23,0.85);
     backdrop-filter:blur(12px);
     position:sticky;
@@ -46,8 +46,6 @@ body{
     list-style:none;
     display:flex;
     gap:30px;
-    margin:0;
-    padding:0;
 }
 
 .nav-links a{
@@ -65,10 +63,12 @@ body{
     box-shadow:0 0 10px rgba(29,78,216,0.4);
 }
 
-/* HERO */
+/* HERO (HOME PAGE) */
 .hero{
-    text-align:center;
-    padding:120px 20px;
+    padding:120px 80px;
+    max-width:900px;
+    margin:auto;
+    text-align:left;
 }
 
 .hero h1{
@@ -87,9 +87,9 @@ body{
 }
 
 .hero p{
-    margin:20px auto;
-    max-width:600px;
+    margin-top:20px;
     color:#94a3b8;
+    max-width:600px;
 }
 
 /* BUTTONS */
@@ -100,7 +100,7 @@ body{
 .btn{
     display:inline-block;
     padding:12px 25px;
-    margin:10px;
+    margin-right:10px;
     border-radius:30px;
     text-decoration:none;
     color:white;
@@ -119,20 +119,20 @@ body{
     border:2px solid #1d4ed8;
 }
 
-/* PAGE SECTIONS */
+/* PAGE LAYOUT (ABOUT / PROJECTS / CONTACT) */
 .page{
     min-height:80vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:60px 20px;
+    padding:80px 80px;
+    max-width:900px;
+    margin:auto;
+    text-align:left;
 }
 
+/* HEADINGS */
+.hero h1,
 .page h1{
     font-size:40px;
-    margin-bottom:40px;
+    margin-bottom:30px;
     color:#1d4ed8;
 }
 
@@ -143,24 +143,13 @@ body{
     border:1px solid rgba(29,78,216,0.2);
     border-radius:20px;
     padding:25px;
-    margin:20px auto;
-    width:90%;
-    max-width:500px;
-    text-align:center;
+    margin:20px 0;
     transition:0.3s;
 }
 
 .card:hover{
     transform:translateY(-10px);
     box-shadow:0 0 30px rgba(29,78,216,0.6);
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-    color:#94a3b8;
 }
 
 /* CONTACT FORM */
@@ -196,15 +185,30 @@ footer{
     box-shadow:0 0 20px rgba(29,78,216,0.6);
 }
 
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    color:#94a3b8;
+}
+
 /* RESPONSIVE */
 @media(max-width:768px){
-    .hero h1{
-        font-size:35px;
-    }
-
     .navbar{
         flex-direction:column;
         gap:10px;
+        padding:20px;
+    }
+
+    .hero,
+    .page{
+        padding:60px 20px;
+        text-align:left;
+    }
+
+    .hero h1{
+        font-size:35px;
     }
 
     .nav-links{
