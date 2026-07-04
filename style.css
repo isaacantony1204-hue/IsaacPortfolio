@@ -8,7 +8,7 @@
 
 html, body{
     width:100%;
-    min-height:100%;
+    scroll-behavior:smooth;
     overflow-x:hidden;
 }
 
@@ -26,7 +26,7 @@ body{
     100%{background-position:0% 50%;}
 }
 
-/* NAVBAR (NO MORE SHIFTING) */
+/* NAVBAR */
 .navbar{
     width:100%;
     display:flex;
@@ -42,26 +42,17 @@ body{
     z-index:1000;
 }
 
-/* LOGO */
 .logo{
     font-size:22px;
     font-weight:bold;
     color:#1d4ed8;
-    flex-shrink:0;
 }
 
-/* NAV LINKS (LOCKED RIGHT SIDE) */
 .nav-links{
     list-style:none;
     display:flex;
-    align-items:center;
     gap:30px;
-
     margin-left:auto;
-}
-
-.nav-links li{
-    display:flex;
 }
 
 .nav-links a{
@@ -70,24 +61,19 @@ body{
     padding:8px 12px;
     border-radius:8px;
     transition:0.3s;
-    white-space:nowrap;
 }
 
 .nav-links a:hover{
-    color:#1d4ed8;
     background:rgba(29,78,216,0.15);
+    color:#1d4ed8;
 }
 
-/* MAIN CONTENT */
-.main{
+/* SECTIONS */
+section{
     width:100%;
     max-width:1100px;
     margin:0 auto;
     padding:100px 20px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
 }
 
 /* HEADINGS */
@@ -111,12 +97,11 @@ p{
 
 /* CARD */
 .card{
-    width:100%;
     background:rgba(2,6,23,0.6);
     border:1px solid rgba(29,78,216,0.2);
     border-radius:20px;
     padding:25px;
-    margin-top:30px;
+    margin-top:20px;
     transition:0.3s;
 }
 
@@ -166,8 +151,8 @@ p{
 /* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
-    margin-top:60px;
+    padding:30px;
+    margin-top:50px;
     color:#94a3b8;
 }
 
@@ -176,7 +161,6 @@ footer{
     .navbar{
         flex-direction:column;
         gap:10px;
-        padding:20px;
     }
 
     .nav-links{
@@ -185,8 +169,7 @@ footer{
         margin-left:0;
     }
 
-    .main{
-        text-align:left;
-        padding:80px 15px;
+    section{
+        padding:70px 15px;
     }
 }

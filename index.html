@@ -16,28 +16,54 @@
     <div class="logo">MyPortfolio</div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="main">
-
+  <!-- HOME -->
+  <section class="main" id="home">
     <h1>Hey, I'm Isaac 👋</h1>
     <h2>Student • Builder • Basketball fan 🏀</h2>
+    <p>I build cool web projects while learning development.</p>
+  </section>
 
+  <!-- ABOUT -->
+  <section class="main" id="about">
+    <h1>About Me</h1>
     <p>
-      Welcome to my portfolio website. I build projects and learn web dev.
+      I'm a student learning web development. I like building clean UI,
+      experimenting with code, and improving my skills every day.
     </p>
+  </section>
 
-    <!-- CONTACT FORM -->
+  <!-- PROJECTS -->
+  <section class="main" id="projects">
+
+    <h1>Projects</h1>
+
     <div class="card">
-      <h2>Contact Me</h2>
+      <h2>Portfolio Website</h2>
+      <p>A responsive personal portfolio built using HTML, CSS, and JS.</p>
+    </div>
 
+    <div class="card">
+      <h2>Google Sheets Contact Form</h2>
+      <p>Form that stores messages directly into Google Sheets using Apps Script.</p>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="main" id="contact">
+
+    <h1>Contact Me</h1>
+
+    <div class="card">
       <form id="contactForm" class="contact-form">
+
         <input type="text" id="name" placeholder="Your Name" required>
 
         <input type="email" id="email" placeholder="Your Email" required>
@@ -45,17 +71,17 @@
         <textarea id="message" placeholder="Your Message" required></textarea>
 
         <button type="submit">Send Message</button>
+
       </form>
     </div>
 
-  </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
     © 2026 MyPortfolio | Built by Isaac
   </footer>
 
-  <!-- JS (IMPORTANT) -->
   <script src="script.js"></script>
 
 </body>
