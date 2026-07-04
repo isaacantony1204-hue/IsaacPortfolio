@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -18,23 +17,21 @@
   </ul>
 </nav>
 
-<section class="main">
+<div class="container">
+
   <h1>Contact Me</h1>
 
-  <div class="card">
-    <form id="contactForm" class="contact-form">
+  <form id="contactForm">
 
-      <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="message" placeholder="Message" required></textarea>
 
-      <input type="email" id="email" placeholder="Your Email" required>
+    <button type="submit">Send</button>
 
-      <textarea id="message" placeholder="Your Message" required></textarea>
+  </form>
 
-      <button type="submit">Send Message</button>
-
-    </form>
-  </div>
-</section>
+</div>
 
 <script src="script.js"></script>
 
