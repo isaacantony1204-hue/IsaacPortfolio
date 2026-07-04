@@ -7,146 +7,194 @@
 }
 
 body{
-    background:linear-gradient(-45deg,#020617,#0b1220,#0f172a,#020617);
-    background-size:400% 400%;
-    animation:bg 12s ease infinite;
+    min-height:100vh;
     color:white;
+
+    /* premium animated background */
+    background:linear-gradient(-45deg,#020617,#0b1220,#0f172a,#030712);
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
 }
 
-@keyframes bg{
+@keyframes gradient{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* NAVBAR */
+/* NAVBAR (GLASS STYLE) */
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:18px 8vw;
-    background:rgba(0,0,0,0.35);
-    backdrop-filter:blur(12px);
+
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 .logo{
     font-size:22px;
-    font-weight:bold;
+    font-weight:700;
     color:#60a5fa;
+    letter-spacing:0.5px;
 }
 
 .nav-links{
     list-style:none;
     display:flex;
-    gap:20px;
+    gap:18px;
 }
 
 .nav-links a{
     text-decoration:none;
-    color:white;
-    padding:8px 12px;
-    border-radius:8px;
+    color:#cbd5e1;
+    padding:8px 14px;
+    border-radius:10px;
+    transition:0.3s;
 }
 
 .nav-links a:hover{
-    background:rgba(96,165,250,0.2);
+    background:rgba(96,165,250,0.15);
+    color:#60a5fa;
 }
 
-/* CENTER WRAPPER (THIS FIXES LEFT PROBLEM) */
+/* CENTER WRAPPER */
 .container{
-    min-height:80vh;
+    min-height:85vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px 20px;
+    padding:60px 20px;
 }
 
-/* HEADINGS */
+/* TITLES */
 h1{
-    font-size:44px;
+    font-size:52px;
+    font-weight:800;
     color:#60a5fa;
+    margin-bottom:10px;
+    text-shadow:0 0 20px rgba(96,165,250,0.2);
+}
+
+h2{
+    font-weight:400;
+    color:#cbd5e1;
     margin-bottom:10px;
 }
 
 p{
     max-width:650px;
-    color:#cbd5e1;
+    color:#94a3b8;
     line-height:1.7;
 }
 
-/* CARD (PRO LOOK) */
+/* CARD (ELITE GLASS) */
 .card{
     width:100%;
-    max-width:600px;
-    margin-top:20px;
-    padding:25px;
+    max-width:650px;
+    margin-top:25px;
+    padding:28px;
 
     background:rgba(255,255,255,0.04);
-    border:1px solid rgba(96,165,250,0.25);
-    border-radius:18px;
+    border:1px solid rgba(96,165,250,0.2);
+    border-radius:20px;
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.3);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(96,165,250,0.4);
 }
 
 /* FORM */
 form{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:14px;
 }
 
-/* INPUTS + MESSAGE BOX FIX */
+/* INPUTS */
 input, textarea{
     padding:14px;
     border:none;
     border-radius:12px;
+
     background:rgba(255,255,255,0.06);
     color:white;
+
     outline:none;
-    font-size:14px;
+    transition:0.3s;
+
+    border:1px solid transparent;
 }
 
-/* MESSAGE BOX (FIXED LOOK) */
+/* FOCUS GLOW */
+input:focus, textarea:focus{
+    border-color:#60a5fa;
+    box-shadow:0 0 15px rgba(96,165,250,0.25);
+}
+
+/* TEXTAREA UPGRADE */
 textarea{
-    min-height:140px;
+    min-height:150px;
     resize:none;
-    border:1px solid rgba(96,165,250,0.2);
 }
 
-/* PLACEHOLDER STYLE */
+/* PLACEHOLDER */
 input::placeholder,
 textarea::placeholder{
-    color:#94a3b8;
+    color:#64748b;
 }
 
-/* BUTTON */
+/* BUTTON (ELITE STYLE) */
 button{
-    padding:12px;
+    padding:14px;
     border:none;
     border-radius:12px;
-    background:#60a5fa;
+
+    background:linear-gradient(90deg,#60a5fa,#3b82f6);
     color:#0f172a;
-    font-weight:bold;
+
+    font-weight:700;
     cursor:pointer;
+
     transition:0.3s;
 }
 
 button:hover{
     transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(59,130,246,0.3);
 }
 
-/* RESPONSIVE */
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#64748b;
+}
+
+/* MOBILE */
 @media(max-width:768px){
     .navbar{
         flex-direction:column;
         gap:10px;
     }
 
-    .container{
-        padding:30px 15px;
+    h1{
+        font-size:38px;
     }
 }
