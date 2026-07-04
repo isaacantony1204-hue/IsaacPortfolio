@@ -1,3 +1,4 @@
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -8,9 +9,10 @@
 body{
     min-height:100vh;
     color:white;
-   background:linear-gradient(-45deg,#020617,#0b1220,#0f172a,#020617);
+    background:linear-gradient(-45deg,#020617,#0b1220,#0f172a,#020617);
     background-size:400% 400%;
     animation:gradientBG 12s ease infinite;
+    overflow-x:hidden;
 }
 
 /* BACKGROUND ANIMATION */
@@ -22,42 +24,48 @@ body{
 
 /* NAVBAR */
 .navbar{
-    .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 50px;
-    background:rgba(2,6,23,0.8);
+    padding:20px 60px;
+    background:rgba(2,6,23,0.85);
     backdrop-filter:blur(12px);
     position:sticky;
     top:0;
-}
+    z-index:1000;
 }
 
 .logo{
     font-size:22px;
     font-weight:bold;
-    color:#38bdf8;
+    color:#1d4ed8;
 }
 
+/* NAV LINKS */
 .nav-links{
     list-style:none;
     display:flex;
-    gap:25px;
+    gap:30px;
+    margin:0;
+    padding:0;
 }
 
 .nav-links a{
     color:white;
     text-decoration:none;
+    font-size:16px;
+    padding:8px 12px;
+    border-radius:8px;
     transition:0.3s;
 }
 
 .nav-links a:hover{
-    color:#38bdf8;
-    text-shadow:0 0 10px #38bdf8;
+    color:#1d4ed8;
+    background:rgba(29,78,216,0.15);
+    box-shadow:0 0 10px rgba(29,78,216,0.4);
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
     text-align:center;
     padding:120px 20px;
@@ -68,8 +76,8 @@ body{
 }
 
 .hero h1 span{
-    color:#38bdf8;
-    text-shadow:0 0 20px #38bdf8;
+    color:#1d4ed8;
+    text-shadow:0 0 20px #1d4ed8;
 }
 
 .hero h2{
@@ -96,51 +104,55 @@ body{
     border-radius:30px;
     text-decoration:none;
     color:white;
-    background:#38bdf8;
-    box-shadow:0 0 20px #38bdf8;
+    background:#1d4ed8;
+    box-shadow:0 0 20px rgba(29,78,216,0.6);
     transition:0.3s;
 }
 
 .btn:hover{
     transform:scale(1.1);
-    box-shadow:0 0 40px #38bdf8;
+    box-shadow:0 0 40px #1d4ed8;
 }
 
 .btn.secondary{
     background:transparent;
-    border:2px solid #38bdf8;
+    border:2px solid #1d4ed8;
 }
 
-/* PAGE LAYOUT */
+/* PAGE SECTIONS */
 .page{
-    padding:80px 20px;
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     text-align:center;
+    padding:60px 20px;
 }
 
 .page h1{
     font-size:40px;
     margin-bottom:40px;
-    color:#38bdf8;
+    color:#1d4ed8;
 }
 
 /* GLASS CARDS */
 .card{
-    .card{
     background:rgba(2,6,23,0.6);
     backdrop-filter:blur(15px);
-    border:1px solid rgba(37,99,235,0.2);
+    border:1px solid rgba(29,78,216,0.2);
     border-radius:20px;
     padding:25px;
     margin:20px auto;
-    width:80%;
+    width:90%;
     max-width:500px;
+    text-align:center;
     transition:0.3s;
-}
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 30px #38bdf8;
+    box-shadow:0 0 30px rgba(29,78,216,0.6);
 }
 
 /* FOOTER */
@@ -151,7 +163,40 @@ footer{
     color:#94a3b8;
 }
 
-/* MOBILE RESPONSIVE */
+/* CONTACT FORM */
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    background:#0b1220;
+    color:white;
+}
+
+.contact-form button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#1d4ed8;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(29,78,216,0.6);
+}
+
+/* RESPONSIVE */
 @media(max-width:768px){
     .hero h1{
         font-size:35px;
@@ -166,33 +211,4 @@ footer{
         flex-direction:column;
         gap:10px;
     }
-}
-.contact-form{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-top:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    outline:none;
-}
-
-.contact-form button{
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#38bdf8;
-    color:white;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.contact-form button:hover{
-    box-shadow:0 0 20px #38bdf8;
-    transform:scale(1.05);
 }
