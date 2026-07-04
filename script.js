@@ -1,36 +1,30 @@
-console.log("Isaac Portfolio Loaded ");
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-// Smooth page load animation
-window.addEventListener("load", () => {
-    document.body.style.opacity = "0";
-    document.body.style.transition = "1s";
+  // collect form data
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
 
-    setTimeout(() => {
-        document.body.style.opacity = "1";
-    }, 100);
-});
-
-// Button click effect
-document.querySelectorAll(".btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        btn.style.transform = "scale(0.95)";
-        setTimeout(() => {
-            btn.style.transform = "scale(1)";
-        }, 150);
+  try {
+    // send to Google Apps Script
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyrEMH9GTj76TYZsSdzOwtjjByYEhTRtCqZvNKpY-83SXgIICIqUUQirgnRJysAsZCI-A/exec", {
+      method: "POST",
+      body: JSON.stringify(data)
     });
-});
 
-// Floating glow effect (mouse tracker)
-document.addEventListener("mousemove", (e) => {
-    let glow = document.createElement("div");
+    // success feedback
+    if (response.ok) {
+      alert("Message sent 🚀");
+      this.reset();
+    } else {
+      alert("Something went wrong 💀");
+    }
 
-    glow.className = "mouse-glow";
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-
-    document.body.appendChild(glow);
-
-    setTimeout(() => {
-        glow.remove();
-    }, 600);
+  } catch (error) {
+    console.log(error);
+    alert("Network error 💀 check console");
+  }
 });
