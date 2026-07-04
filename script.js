@@ -1,4 +1,4 @@
-console.log("Isaac Portfolio Loaded 🚀");
+console.log("Isaac Portfolio Loaded ");
 
 // Smooth page load animation
 window.addEventListener("load", () => {
