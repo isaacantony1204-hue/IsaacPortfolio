@@ -63,31 +63,30 @@ body{
     box-shadow:0 0 10px rgba(29,78,216,0.4);
 }
 
-/* HERO (HOME PAGE) */
-.hero{
-    padding:120px 80px;
+/* MAIN CONTAINER (FIXES EVERYTHING) */
+.container{
     max-width:900px;
-    margin:auto;
+    margin:0 auto;
+    padding:100px 20px;
     text-align:left;
 }
 
-.hero h1{
-    font-size:50px;
-}
-
-.hero h1 span{
+/* HEADINGS */
+h1{
+    font-size:40px;
+    margin-bottom:30px;
     color:#1d4ed8;
-    text-shadow:0 0 20px #1d4ed8;
 }
 
-.hero h2{
-    margin-top:10px;
+/* HERO TEXT STYLING (HOME PAGE USES SAME CONTAINER) */
+h2{
     font-weight:300;
     color:#cbd5e1;
+    margin-top:10px;
 }
 
-.hero p{
-    margin-top:20px;
+p{
+    margin-top:15px;
     color:#94a3b8;
     max-width:600px;
 }
@@ -119,24 +118,7 @@ body{
     border:2px solid #1d4ed8;
 }
 
-/* PAGE LAYOUT (ABOUT / PROJECTS / CONTACT) */
-.page{
-    min-height:80vh;
-    padding:80px 80px;
-    max-width:900px;
-    margin:auto;
-    text-align:left;
-}
-
-/* HEADINGS */
-.hero h1,
-.page h1{
-    font-size:40px;
-    margin-bottom:30px;
-    color:#1d4ed8;
-}
-
-/* GLASS CARDS */
+/* CARDS */
 .card{
     background:rgba(2,6,23,0.6);
     backdrop-filter:blur(15px);
@@ -201,18 +183,12 @@ footer{
         padding:20px;
     }
 
-    .hero,
-    .page{
-        padding:60px 20px;
-        text-align:left;
-    }
-
-    .hero h1{
-        font-size:35px;
-    }
-
     .nav-links{
         flex-direction:column;
         gap:10px;
+    }
+
+    .container{
+        padding:60px 20px;
     }
 }
