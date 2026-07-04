@@ -1,3 +1,4 @@
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -5,45 +6,61 @@
     font-family:'Poppins',sans-serif;
 }
 
+html, body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
 body{
-    min-height:100vh;
     color:white;
     background:linear-gradient(-45deg,#020617,#0b1220,#0f172a,#020617);
     background-size:400% 400%;
     animation:gradientBG 12s ease infinite;
-    overflow-x:hidden;
 }
 
-/* BACKGROUND ANIMATION */
 @keyframes gradientBG{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* NAVBAR (SAME ON ALL PAGES) */
+/* NAVBAR (FIXED FOREVER ALIGNMENT) */
 .navbar{
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 80px;
+
+    padding:20px clamp(20px,5vw,80px);
     background:rgba(2,6,23,0.85);
     backdrop-filter:blur(12px);
+
     position:sticky;
     top:0;
     z-index:1000;
 }
 
+/* LOGO */
 .logo{
     font-size:22px;
     font-weight:bold;
     color:#1d4ed8;
+    flex-shrink:0;
 }
 
+/* NAV LINKS (LOCKED ALIGNMENT) */
 .nav-links{
     list-style:none;
     display:flex;
+    align-items:center;
     gap:30px;
+    margin-left:auto;
+}
+
+.nav-links li{
+    display:flex;
 }
 
 .nav-links a{
@@ -52,6 +69,7 @@ body{
     padding:8px 12px;
     border-radius:8px;
     transition:0.3s;
+    white-space:nowrap;
 }
 
 .nav-links a:hover{
@@ -59,12 +77,16 @@ body{
     background:rgba(29,78,216,0.15);
 }
 
-/* MAIN WRAPPER (FIXES ALIGNMENT ISSUE) */
+/* MAIN WRAPPER (CONSISTENT ACROSS ALL PAGES) */
 .main{
-    max-width:900px;
+    width:100%;
+    max-width:1100px;
     margin:0 auto;
     padding:100px 20px;
-    text-align:left;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 }
 
 /* HEADINGS */
@@ -164,5 +186,10 @@ footer{
     .nav-links{
         flex-direction:column;
         gap:10px;
+        margin-left:0;
+    }
+
+    .main{
+        text-align:left;
     }
 }
