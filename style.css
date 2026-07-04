@@ -9,7 +9,6 @@
 html, body{
     width:100%;
     scroll-behavior:smooth;
-    overflow-x:hidden;
 }
 
 /* BACKGROUND */
@@ -32,11 +31,9 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:20px clamp(20px,5vw,80px);
-    background:rgba(2,6,23,0.85);
-    backdrop-filter:blur(12px);
-
+    padding:18px 8vw;
+    background:rgba(2,6,23,0.7);
+    backdrop-filter:blur(15px);
     position:sticky;
     top:0;
     z-index:1000;
@@ -44,64 +41,73 @@ body{
 
 .logo{
     font-size:22px;
-    font-weight:bold;
-    color:#1d4ed8;
+    font-weight:700;
+    color:#60a5fa;
 }
 
 .nav-links{
     list-style:none;
     display:flex;
-    gap:30px;
-    margin-left:auto;
+    gap:25px;
 }
 
 .nav-links a{
-    color:white;
+    color:#cbd5e1;
     text-decoration:none;
-    padding:8px 12px;
-    border-radius:8px;
+    padding:8px 14px;
+    border-radius:10px;
     transition:0.3s;
 }
 
 .nav-links a:hover{
-    background:rgba(29,78,216,0.15);
-    color:#1d4ed8;
+    background:rgba(96,165,250,0.15);
+    color:#60a5fa;
 }
 
-/* SECTIONS */
-section{
-    width:100%;
-    max-width:1100px;
-    margin:0 auto;
-    padding:100px 20px;
+/* PAGE WRAPPER (THIS FIXES YOUR LEFT PROBLEM) */
+.main{
+    max-width:1000px;
+    margin:80px auto;
+    padding:40px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
 
 /* HEADINGS */
 h1{
-    font-size:40px;
-    margin-bottom:20px;
-    color:#1d4ed8;
+    font-size:44px;
+    margin-bottom:15px;
+    color:#60a5fa;
 }
 
 h2{
-    font-weight:300;
+    font-size:20px;
+    font-weight:400;
     color:#cbd5e1;
-    margin-top:10px;
 }
 
 p{
     margin-top:15px;
+    max-width:700px;
     color:#94a3b8;
-    line-height:1.6;
+    line-height:1.7;
 }
 
-/* CARD */
+/* CARD DESIGN (MAKES IT LOOK PRO) */
 .card{
-    background:rgba(2,6,23,0.6);
-    border:1px solid rgba(29,78,216,0.2);
-    border-radius:20px;
+    width:100%;
+    max-width:700px;
+    margin-top:25px;
     padding:25px;
-    margin-top:20px;
+
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(96,165,250,0.2);
+    border-radius:18px;
+    backdrop-filter:blur(10px);
+
     transition:0.3s;
 }
 
@@ -114,16 +120,14 @@ p{
     display:flex;
     flex-direction:column;
     gap:12px;
-    margin-top:15px;
 }
 
 .contact-form input,
 .contact-form textarea{
-    width:100%;
     padding:12px;
     border:none;
     border-radius:10px;
-    background:#0b1220;
+    background:rgba(255,255,255,0.05);
     color:white;
     outline:none;
 }
@@ -137,39 +141,33 @@ p{
     padding:12px;
     border:none;
     border-radius:10px;
-    background:#1d4ed8;
-    color:white;
+    background:#60a5fa;
+    color:#0f172a;
+    font-weight:bold;
     cursor:pointer;
     transition:0.3s;
 }
 
 .contact-form button:hover{
     transform:scale(1.05);
-    background:#2563eb;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:30px;
-    margin-top:50px;
-    color:#94a3b8;
+    padding:40px;
+    color:#64748b;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
     .navbar{
         flex-direction:column;
         gap:10px;
     }
 
-    .nav-links{
-        flex-direction:column;
-        gap:10px;
-        margin-left:0;
-    }
-
-    section{
-        padding:70px 15px;
+    .main{
+        padding:20px;
+        margin-top:40px;
     }
 }

@@ -1,89 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-
+  <title>Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">MyPortfolio</div>
+<nav class="navbar">
+  <div class="logo">MyPortfolio</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HOME -->
-  <section class="main" id="home">
-    <h1>Hey, I'm Isaac 👋</h1>
-    <h2>Student • Builder • Basketball fan 🏀</h2>
-    <p>I build cool web projects while learning development.</p>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="main" id="about">
-    <h1>About Me</h1>
-    <p>
-      I'm a student learning web development. I like building clean UI,
-      experimenting with code, and improving my skills every day.
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="main" id="projects">
-
-    <h1>Projects</h1>
-
-    <div class="card">
-      <h2>Portfolio Website</h2>
-      <p>A responsive personal portfolio built using HTML, CSS, and JS.</p>
-    </div>
-
-    <div class="card">
-      <h2>Google Sheets Contact Form</h2>
-      <p>Form that stores messages directly into Google Sheets using Apps Script.</p>
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section class="main" id="contact">
-
-    <h1>Contact Me</h1>
-
-    <div class="card">
-      <form id="contactForm" class="contact-form">
-
-        <input type="text" id="name" placeholder="Your Name" required>
-
-        <input type="email" id="email" placeholder="Your Email" required>
-
-        <textarea id="message" placeholder="Your Message" required></textarea>
-
-        <button type="submit">Send Message</button>
-
-      </form>
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 MyPortfolio | Built by Isaac
-  </footer>
-
-  <script src="script.js"></script>
+<div class="main">
+  <h1>Hey, I'm Isaac 👋</h1>
+  <h2>Student • Builder • Basketball fan 🏀</h2>
+  <p>Welcome to my portfolio website.</p>
+</div>
 
 </body>
-
 </html>
